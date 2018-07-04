@@ -1,0 +1,9 @@
+test_lbfgsb: test_lbfgsb.cpp lbfgsb.so
+	g++ -Wno-logical-op-parentheses -O2 -o test_lbfgsb test_lbfgsb.cpp -L. lbfgsb.so
+lbfgsb.so:
+	gcc -Wno-logical-op-parentheses -O2 -fPIC -shared -c -D__hpux ./lbfgsb/*.c
+	g++ -Wno-logical-op-parentheses -O2 -fPIC -shared -c -D__hpux ./lbfgsb/*.cpp
+	g++ -Wno-logical-op-parentheses -O2 -fPIC -shared -o lbfgsb.so *.o
+	rm -f *.o
+clean:
+	rm -f *.o lbfgsb.so test_lbfgsb
