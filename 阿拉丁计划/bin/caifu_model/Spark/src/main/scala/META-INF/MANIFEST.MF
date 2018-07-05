@@ -1,3 +1,0 @@
-Manifest-Version: 1.0
-Main-Class: cn.creditease.invest.test.describe_table_final_code
-

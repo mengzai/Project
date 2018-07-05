@@ -1,4 +1,0 @@
-liblr.so:
-	g++ -Wno-logical-op-parentheses -O2 -o liblr.so -shared -fPIC liblr.cpp lr.cpp -I ../../data -I ../../optimization ../../data/data.cpp ../../optimization/lbfgs.cpp -L. lbfgsb.so
-clean:
-	rm -f *.o liblr.so
